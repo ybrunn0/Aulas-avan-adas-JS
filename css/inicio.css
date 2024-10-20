@@ -1,0 +1,22 @@
+h1{
+    color: rgb(237, 237, 14);
+    position: relative;
+    display: flex;
+    justify-content: center;
+   
+   }
+
+h3 strong{
+    font-size: 18px;
+}
+
+span{
+    color: blue;
+}
+
+p strong.variavel{
+    color: red;
+}
+p strong.all{
+    font-size: 24px;
+}

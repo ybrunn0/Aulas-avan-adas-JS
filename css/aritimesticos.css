@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(253, 244, 244);
+}
+
+h1{
+ color: rgb(237, 237, 14);
+ position: relative;
+ display: flex;
+ justify-content: center;
+
+}
+p{
+    font-size: 16px;
+}
+
+p strong{
+    font-size: 18px;
+}
