@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/laco.css">
+  <title>JavaScript - Laços de Repetição</title>
+</head>
+
+<body>
+  <h1>Laços de Repetição em JavaScript</h1>
+
+  <p>Laços de repetição são frequentemente usados ao trabalharmos com arrays e são úteis para executar blocos de código repetidamente.</p>
+
+  <ul>
+    <li>
+      <strong>for:</strong> Usado quando o número de iterações é conhecido. Ele inclui inicialização, condição e incremento/decremento.
+      <pre>
+for (inicialização; condição; incremento) {
+  // bloco de código
+}
+      </pre>
+      <p><strong>Exemplo 1:</strong> Imprimir números de 1 a 5.</p>
+      <pre>
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+      </pre>
+    </li>
+
+    <li>
+      <strong>while:</strong> Executa o bloco de código enquanto a condição for verdadeira. Útil quando o número de iterações é desconhecido.
+      <pre>
+while (condição) {
+  // bloco de código
+}
+      </pre>
+      <p><strong>Exemplo 2:</strong> Contagem regressiva de 5 a 1.</p>
+      <pre>
+let i = 5;
+while (i > 0) {
+  console.log(i);
+  i--;
+}
+      </pre>
+    </li>
+
+    <li>
+      <strong>do...while:</strong> Executa o bloco de código pelo menos uma vez, pois a condição é verificada após a primeira execução.
+      <pre>
+do {
+  // bloco de código
+} while (condição);
+      </pre>
+      <p><strong>Exemplo 1:</strong> Imprimir número aleatório até que seja maior que 0.7.</p>
+      <pre>
+let numero;
+do {
+  numero = Math.random();
+  console.log(numero);
+} while (numero <= 0.7);
+      </pre>
+      <p><strong>Exemplo 2:</strong> Solicitar senha até que seja correta.</p>
+      <pre>
+let senha;
+do {
+  senha = prompt("Digite a senha:");
+} while (senha !== "1234");
+alert("Senha correta!");
+      </pre>
+    </li>
+
+    <li>
+      <strong>for...of:</strong> Usado para iterar sobre valores de objetos iteráveis, como arrays e strings. Ele acessa diretamente os valores.
+      <pre>
+for (const valor of objetoIterável) {
+  // bloco de código
+}
+      </pre>
+      <p><strong>Exemplo 1:</strong> Imprimir cada caractere de uma string.</p>
+      <pre>
+const palavra = "JavaScript";
+for (const letra of palavra) {
+  console.log(letra);
+}
+      </pre>
+      <p><strong>Exemplo 2:</strong> Somar valores de um array.</p>
+      <pre>
+const numeros = [1, 2, 3, 4, 5];
+let soma = 0;
+for (const numero of numeros) {
+  soma += numero;
+}
+console.log("Soma total:", soma);
+      </pre>
+    </li>
+
+    <li>
+      <strong>for...in:</strong> Itera sobre as propriedades enumeráveis de um objeto. Ideal para objetos, mas não recomendado para arrays.
+      <pre>
+for (const propriedade in objeto) {
+  // bloco de código
+}
+      </pre>
+      <p><strong>Exemplo 1:</strong> Imprimir propriedades e valores de um objeto.</p>
+      <pre>
+const pessoa = { nome: "Ana", idade: 30, cidade: "São Paulo" };
+for (const propriedade in pessoa) {
+  console.log(propriedade, ":", pessoa[propriedade]);
+}
+      </pre>
+      <p><strong>Exemplo 2:</strong> Contar caracteres em uma string.</p>
+      <pre>
+const frase = "Olá, mundo!";
+const contagem = {};
+for (const letra of frase) {
+  contagem[letra] = (contagem[letra] || 0) + 1;
+} 
+console.log("Contagem de caracteres:", contagem);
+      </pre>
+    </li>
+  </ul>
+
+  <h2>Comandos Especiais nos Laços</h2>
+<ul>
+  <li>
+    <strong>break:</strong>
+    Interrompe o laço e sai imediatamente. Útil quando queremos parar a execução ao atingir uma certa condição.
+    <pre>
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    break; // Para o loop quando i é igual a 5
+  }
+  console.log(i);
+}
+    </pre>
+  </li>
+  <li>
+    <strong>continue:</strong>
+    Interrompe a iteração atual e passa para a próxima, ignorando o restante do código dentro do laço para aquela iteração.
+    <pre>
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    continue; // Pula números pares
+  }
+  console.log(i); // Imprime apenas números ímpares
+}
+    </pre>
+  </li>
+</ul>
+
+<h2>Evitar Loops Infinitos</h2>
+<p>É essencial garantir que os laços tenham uma condição de término válida para evitar loops infinitos que podem travar a execução do código.</p>
+<pre>
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++; // Certifique-se de incluir um incremento ou uma condição de parada
+}
+</pre>
+
+<h2>Diferença entre for...of e for...in</h2>
+<p><strong>for...of:</strong> Usado para iterar sobre valores de objetos iteráveis, como arrays e strings.</p>
+<p><strong>for...in:</strong> Usado para iterar sobre propriedades de objetos, mas não é recomendado para arrays, pois pode gerar comportamentos inesperados.</p>
+
+<pre>
+// Exemplo com for...of
+const array = [10, 20, 30];
+for (const valor of array) {
+  console.log(valor); // Imprime os valores: 10, 20, 30
+}
+
+// Exemplo com for...in
+const pessoa = { nome: "Carlos", idade: 25, cidade: "Brasília" };
+for (const propriedade in pessoa) {
+  console.log(propriedade, ":", pessoa[propriedade]);
+}
+</pre>
+
+<h2>forEach com Arrays</h2>
+<p>O método <strong>forEach</strong> é usado para iterar sobre arrays. Ele executa uma função para cada elemento do array e é útil em JavaScript moderno.</p>
+<pre>
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach(numero => {
+  console.log(numero); // Imprime cada número
+});
+</pre>
+
+<h2>Performance dos Laços</h2>
+<p>Para grandes volumes de dados, o laço <strong>for</strong> tradicional pode ser mais rápido em comparação a <strong>forEach</strong> e <strong>for...of</strong>, embora a diferença seja pequena para casos menores.</p>
+
+</body>
+<script src="/Js/loops.js"></script>
+
+</html>

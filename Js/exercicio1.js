@@ -138,8 +138,8 @@ alert("O valor do resto da divisão por 3 é: " + segundoNumber)
 
 // 15)Escreva um programa que verifique se um número é par ou ímpar.
 
-let numero = Math.abs(parseFloat(prompt("Digite um número, positivo ou negativo: ")) || NaN)
-const resultado = ["Negatrivo", "Positivo"][Math.sign(numero)]
+let numero9 = Math.abs(parseFloat(prompt("Digite um número, positivo ou negativo: ")) || NaN)
+const resultado = ["Negatrivo", "Positivo"][Math.sign(numero9)]
 
 console.log("O número é: " + resultado);
 document.write("O número é: " + resultado);
@@ -147,9 +147,9 @@ alert("O número é: " + resultado);
 
 // 16)Escreva um programa que verifique qual dos dois números é maior.
 
-let numero = Math.abs(parseFloat(prompt("Digite um númeoro")))
+let numeroVaria = Math.abs(parseFloat(prompt("Digite um númeoro")))
 let outroNumero = Math.abs(parseFloat(prompt("Digite um númeoro")))
-resultado = numero > outroNumero ? "O número " + numero + " que o " + outroNumero : "O número " + outroNumero + " que o " + numero
+resultado = numeroVaria > outroNumero ? "O número " + numeroVaria + " que o " + outroNumero : "O número " + outroNumero + " que o " + numeroVaria
 
 console.log(resultado);
 document.write(resultado);
@@ -165,9 +165,9 @@ document.write(idade);
 alert(idade);
 
 // 18)Escreva um programa que verifique se um número está no intervalo entre 0 e 100.
-let numero = Math.abs(parseInt(prompt("Digite um número: ")))
+let NovoNumero1 = Math.abs(parseInt(prompt("Digite um número: ")))
 
-saida = numero >= 0 && numero <= 100 ? "Esse número esta entre '0' e '100'" : "Esse número esta entre '0' e '100'"
+saida = NovoNumero1 >= 0 && NovoNumero1 <= 100 ? "Esse número esta entre '0' e '100'" : "Esse número esta entre '0' e '100'"
 
 console.log(saida);
 document.write(saida);
@@ -230,9 +230,9 @@ alert(algumNumNegativo);
 
 // 24)Escreva um programa que verifique se um número é par e positivo.
 
-let numero = parseInt(prompt("Digite um número:"));
+let numero20 = parseInt(prompt("Digite um número:"));
 
-let parEPositivo = numero > 0 && numero % 2 === 0 ? "O número é par e positivo" : "O número não é par e positivo";
+let parEPositivo = numero20 > 0 && numero20 % 2 === 0 ? "O número é par e positivo" : "O número não é par e positivo";
 
 console.log(parEPositivo);
 document.write(parEPositivo);
@@ -240,9 +240,9 @@ alert(parEPositivo);
 
 // 25)Escreva um programa que verifique se um número não é múltiplo de 5.
 
-let numero = parseInt(prompt("Digite um número:"));
+let numeroAtual = parseInt(prompt("Digite um número:"));
 
-let naoMultiploDe5 = numero % 5 !== 0 ? "O número não é múltiplo de 5" : "O número é múltiplo de 5";
+let naoMultiploDe5 = numeroAtual % 5 !== 0 ? "O número não é múltiplo de 5" : "O número é múltiplo de 5";
 
 console.log(naoMultiploDe5);
 document.write(naoMultiploDe5);
@@ -251,9 +251,9 @@ alert(naoMultiploDe5);
 
 // 26)Escreva um programa que verifique se um número está fora do intervalo de 1 a 10.
 
-let numero = parseInt(prompt("Digite um número:"));
+let numeroDesenvolver = parseInt(prompt("Digite um número:"));
 
-let foraDoIntervalo = numero < 1 || numero > 10 ? "O número está fora do intervalo de 1 a 10" : "O número está dentro do intervalo de 1 a 10";
+let foraDoIntervalo = numeroDesenvolver < 1 || numeroDesenvolver > 10 ? "O número está fora do intervalo de 1 a 10" : "O número está dentro do intervalo de 1 a 10";
 
 console.log(foraDoIntervalo);
 document.write(foraDoIntervalo);

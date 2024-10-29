@@ -235,7 +235,7 @@ switch (mes) {
 // se for igual a 6 nota “D”, se for igual a 5 ou menor, nota “F”
 let notaFinal = parseFloat(prompt("Digite uma notaFinal entre 0 e 10:"));
 
-let classificacaoFinal = notaFinal >= 9 ? "A" :
+let classificacaoFinal = (notaFinal <= 10 && notaFinal >= 9) ? "A" :
     notaFinal === 8 ? "B" :
         notaFinal === 7 ? "C" :
             notaFinal === 6 ? "D" :
